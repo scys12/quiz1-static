@@ -26,8 +26,8 @@ const hideAnimationOnProjectItem = (e) => {
     transitionBottom.style.width = '';
     transitionLeft.style.height= '';
     transitionRight.style.height= '';
-    transitionLeft.style.transitionDelay = '';
-    transitionRight.style.transitionDelay = '';
+    transitionLeft.style.transitionDelay = '0.25s';
+    transitionRight.style.transitionDelay = '0.25s';
 }
 
 const projectItems= document.querySelectorAll('.project-card');

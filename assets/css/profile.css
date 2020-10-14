@@ -48,13 +48,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 20px;
 }
 
 .icon-group{
     display: flex;
     flex-direction: row;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .icon-box{
@@ -197,5 +196,5 @@
     width: 150px;
     height: 150px;
     display: flex;
-    margin: auto;
+    margin: 0px auto 10px;
 }
