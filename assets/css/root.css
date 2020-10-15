@@ -84,7 +84,12 @@ a {
     color: var(--text-color);
 }
 
-.nav-link.active{
+.left-menu-active{
+    background-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+.active{
     background-color: var(--color-primary);
     border-radius: 3px;
 }
