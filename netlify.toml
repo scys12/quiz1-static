@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/"
+  to = "/quiz1"
+  status = 301
+  force = true
+  headers = {X-From = "Netlify"}
