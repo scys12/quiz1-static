@@ -1,3 +1,5 @@
+[build]
+  command = "make create-quiz1"
 [[redirects]]
   from = "/"
   to = "/quiz1"
