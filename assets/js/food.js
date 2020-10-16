@@ -17,7 +17,7 @@ const decodeDataSection = (sections, idx) => {
     if (idx == 0)
         dataSection = [sections[idx].querySelector('h1').innerText, '0 10px 0 0'];
     else if (idx == sections.length-1)
-        dataSection = [sections[idx].querySelector('h1').innerText, '0 0 10px 0 0'];
+        dataSection = [sections[idx].querySelector('h1').innerText, '0 0 10px 0'];
     else dataSection = [sections[idx].querySelector('h1').innerText, ''];
     return dataSection;
 }
