@@ -1,24 +1,25 @@
 const displayMenuSection = (e) => {
     const _this = e.srcElement;
-    _this.style.width = '120px';
+    _this.style.width = '150px';
     const arrowContainer = document.querySelector('.icon-container');
     arrowContainer.style.display = 'none';
     
-    const papeda = addLinkSectionToMenu(['Papeda', '0 10px 0 0']);
-    const abon =  addLinkSectionToMenu(['Abon Gulung', '']);
-    const sagu =  addLinkSectionToMenu(['Sagu Lempeng', '']);
-    const udang = addLinkSectionToMenu(['Udang Selingkuh', '0 0 10px 0']);
-    
-    _this.appendChild(papeda);
-    _this.appendChild(abon);
-    _this.appendChild(sagu);
-    _this.appendChild(udang);
-    
-    papeda.addEventListener('click', scrollToSection.bind(this, 'papeda'));
-    abon.addEventListener('click', scrollToSection.bind(this, 'abon-gulung'));
-    sagu.addEventListener('click', scrollToSection.bind(this, 'sagu-lempeng'));
-    udang.addEventListener('click', scrollToSection.bind(this, 'udang-selingkuh'));
+    const sections = document.querySelectorAll('section');
+    sections.forEach( (section, idx) => {
+        const dataSection = decodeDataSection(sections, idx);
+        const newLink = addLinkSectionToMenu(dataSection);        
+        _this.appendChild(newLink);
+        newLink.addEventListener('click', scrollToSection.bind(this, section.id))
+    });        
+}
 
+const decodeDataSection = (sections, idx) => {
+    if (idx == 0)
+        dataSection = [sections[idx].querySelector('h1').innerText, '0 10px 0 0'];
+    else if (idx == sections.length-1)
+        dataSection = [sections[idx].querySelector('h1').innerText, '0 0 10px 0 0'];
+    else dataSection = [sections[idx].querySelector('h1').innerText, ''];
+    return dataSection;
 }
 
 const addLinkSectionToMenu = ([textName, borderRadius]) => {
@@ -57,19 +58,25 @@ const leftMenu = document.querySelector('.left-stick-menu');
 leftMenu.addEventListener('mouseenter', displayMenuSection);
 leftMenu.addEventListener('mouseleave', hideMenuSection);
 
-const slideDown = element => {
+const slideDown = (className, element) => {
     const _this = element.srcElement;
-    const container = _this.querySelector('.food-description-container');
+    const container = _this.querySelector(`.${className}-description-container`);
     container.style.height = `${container.scrollHeight}px`;
 };
-const slideUp = element => {
+const slideUp = (className, element) => {
     const _this = element.srcElement;
-    const container = _this.querySelector('.food-description-container');
+    const container = _this.querySelector(`.${className}-description-container`);
     container.style.height = ``;
 }
 
 const foodContainers = document.querySelectorAll('.food-item');
 foodContainers.forEach( container => {
-    container.addEventListener('mouseenter', slideDown)
-    container.addEventListener('mouseleave', slideUp)
+    container.addEventListener('mouseenter', slideDown.bind(this, 'food'))
+    container.addEventListener('mouseleave', slideUp.bind(this, 'food'))
+});
+
+const touristContainers = document.querySelectorAll('.tourist-item');
+touristContainers.forEach( container => {
+    container.addEventListener('mouseenter', slideDown.bind(this, 'tourist'))
+    container.addEventListener('mouseleave', slideUp.bind(this, 'tourist'))
 });

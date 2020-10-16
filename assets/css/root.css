@@ -1,3 +1,4 @@
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -57,7 +58,7 @@ a {
 
 .navbar {
     display: flex;
-    margin: 0 25px;
+    margin: 0 10vw;
     width: 100%;
 }
 
@@ -68,16 +69,42 @@ a {
 }
 
 .nav-link {
+    display: flex;
     padding: 15px 13px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link a {
     color: var(--color-primary-lighter);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     transition: all 0.5s ease 0s;
     font-weight: 600;
+}
+
+.nav-logo{
+    padding: 10px 0;
+}
+
+.nav-logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo a span{
+    color: var(--color-primary-lighter);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 7px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-logo a:hover span{
+    color: var(--text-color);
 }
 
 .nav-link a:hover{
@@ -159,10 +186,12 @@ i.fa.fa-angle-down{
     border-bottom: 1px solid #8e8e8e;
     padding: 0px 0 10px 0;
     font-weight: 600;
+    font-size: 20px;
 }
 
 .contact-icon, .about-text{
     color: white;
+    font-size: 18px;
     font-weight: 600;
 }
 .contact-information{
@@ -170,6 +199,7 @@ i.fa.fa-angle-down{
     margin-bottom: 10px;
     border-bottom: 1px solid #8e8e8e;
     padding: 10px 0 5px 0;
+    font-size: 15px;
 }
 
 .contact{
@@ -183,18 +213,23 @@ aside .about-text{
 
 .social-media{
     list-style: none;
+    justify-content: space-around;
     display: flex;
     color: #8e8e8e;
-    font-size: 18px
+    font-size: 18px;
 }
 
 .rectangle-social-media{
     border: 1px solid #8e8e8e;
-    padding: 2px 11px;
+    padding: 10px 15px;
 }
 
 .rectangle-social-media a{
     color: #8e8e8e;
+}
+
+.rectangle-social-media i{
+    font-size: 30px;
 }
 
 #footer-site{
@@ -205,6 +240,7 @@ aside .about-text{
 .copyright{
     display: inline-block;
     color: white;
+    font-size: 16px;
 }
 
 .row{
@@ -278,6 +314,8 @@ aside .about-text{
     margin-right: auto;
     margin-left: auto;
 }
+
+/* Profile Page CSS */
 
 #particles-js {
     min-width: 98vw;
@@ -422,7 +460,7 @@ aside .about-text{
 }
 
 .project-item-title{
-    font-size: 1.75rem;
+    font-size: 28px;
     color: var(--color-primary-lighter);
     margin-bottom: 0.75rem;
 }
@@ -478,4 +516,532 @@ aside .about-text{
     height: 150px;
     display: flex;
     margin: 0px auto 10px;
+}
+
+/* Hometown Page CSS */
+
+.hometown-background{
+    background: url('../image/hometown.jpg')  no-repeat center;
+    background-size: cover;
+    position: relative;
+    min-width: 98vw;
+    min-height: 100vh;
+}
+
+.hometown-container{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 10vw 10vh;
+    min-height: 100vh;
+    text-align: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.hometown-box{
+    width: 100%;
+    background: rgba(55, 71, 79, 0.6);
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 20px 2px var(--shadow-color-dark);    
+    transition: all 0.5s ease-in 0s;
+}
+
+.hometown-box:hover{
+    transform: scale(1.1);
+    box-shadow: -1px 9px 40px -12px var(--shadow-color-dark);
+}
+
+.hometown-title-text h1{
+    color: var(--text-color);
+    font-size: 39px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hometown-title-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.line-before{
+    height: 2px;
+    background-color: var(--text-color);
+    width: 50px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+    transition: all 0.5s ease 0s;
+}
+
+.line-after{
+    height: 2px;
+    background-color: var(--text-color);
+    width: 50px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10px;
+    transition: all 0.5s ease 0s;
+}
+
+.line-after{
+
+}
+
+.hometown-description-text p{
+    color: var(--color-primary-lighter);
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.hometown-description-container{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    flex-wrap: wrap;
+}
+
+.hometown-description-text{
+    padding: 10px;
+    flex-basis: 33%;
+}
+
+
+/* Homepage Page CSS */
+
+/* Welcome Wrapper */
+
+.welcome-wrapper{
+    min-width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 6vw 10vh;
+    min-height: 100vh;
+    text-align: center;
+    background-color: var(--color-primary-dark);
+}
+
+.welcome-wrapper .hello-text h1{
+    color: white;
+    font-size: 39px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.welcome-wrapper .name-text{
+    display: inline-block;
+}
+
+.welcome-wrapper .name-text h1{
+    color: var(--color-primary-light);
+    font-size: 55px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-right: 2px solid var(--color-primary-light);
+    animation: type 2.5s steps(22, end), blink-caret 1s step-end infinite;
+    -webkit-animation: type 2.5s steps(22, end), blink-caret 1s step-end infinite;
+    -o-animation: type 2.5s steps(22, end), blink-caret 1s step-end infinite;
+    -moz-animation: type 2.5s steps(22, end), blink-caret 1s step-end infinite;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+
+.welcome-wrapper .description-text p{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.welcome-container{
+}
+
+.profile-button, .hometown-button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 11px 25px;
+    border-radius: 2px;
+    margin: 15px 30px;
+}
+
+.profile-button span, .hometown-button span{
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+
+.button-group-text{
+    display: flex;
+    justify-content: center;
+    margin: 45px 12px 7px;
+    text-align: center;
+}
+
+.button-line-bottom{
+    height: 2px;
+    transition: all 0.5s ease 0s;
+    width: 0%;
+}
+
+.profile-button .button-line-bottom{
+    background-color: var(--shadow-color-dark);
+}
+
+.hometown-button .button-line-bottom{
+    background-color: var(--color-primary-light);
+}
+
+.button-line-bottom:hover{
+    width: 100%;
+}
+
+@keyframes type {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--color-primary-light);
+    }
+}
+
+/* Food Wrapper */
+.food-wrapper{
+    min-width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 10vw;
+    min-height: 100vh;
+    background-color: var(--text-color);
+    text-align: center;
+}
+
+.food-name-text h1{
+    color: var(--color-primary-dark);
+    font-size: 39px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.food-card{
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.food-item{
+    margin: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in;
+    box-shadow: 1px 1px 7px 1px var(--shadow-color);
+    border-radius: 4px;
+    flex-basis: 47%;
+    position: relative;
+    transform: translateY(0px);
+}
+
+.food-item:hover{
+    box-shadow: -1px 9px 40px -12px var(--shadow-color-dark);
+    transform: translateY(-20px);
+}
+
+.food-image img, .tourist-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.food-image{
+    width: 100%;
+    height: 250px;
+}
+
+.food-description, .tourist-description{
+    padding: 15px 35px;
+}
+
+.food-title, .tourist-title{
+    text-align: center;
+    margin: 5px 0;
+}
+
+.food-title h4, .tourist-title h4{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.food-contains p{
+    font-size: 15px;
+    color: var(--color-primary-dark);
+    font-weight: 400;
+}
+
+.food-logo, .tourist-logo{
+    position: relative;
+}
+
+.food-tag, .tourist-tag{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: right;
+}
+.food-tag .food-location, .tourist-tag .tourist-location{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-primary-light);
+    color: black;
+    text-decoration: none;
+    border: 1px solid var(--color-primary-light);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: white;
+    padding: 20px;
+}
+
+.food-tag::after, .tourist-tag::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: var(--color-primary-light);
+}
+
+.btn-primary-outline.see-more-button, .btn-primary.see-more-button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 11px 25px;
+    border-radius: 2px;
+    margin: 15px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.food-container .see-more-button-container .see-more-button .button-line-bottom{
+    background-color: var(--color-primary-light);
+}
+
+.see-more-button-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Tourist Wrapper */
+
+.tourist-wrapper{
+    min-width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 10vw;
+    min-height: 100vh;
+    background-color: var(--color-primary-dark);
+    text-align: center;
+}
+
+.tourist-container .tourist-name-text h1{
+    color: var(--color-primary-lighter);
+    font-size: 39px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.tourist-item:hover{
+    box-shadow: -1px 9px 40px -12px var(--shadow-color-dark);
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.tourist-item{
+    margin: 10px;
+    background-color: var(--color-primary-lighter);
+    transition: all 0.3s ease-in;
+    box-shadow: 1px 1px 7px 1px var(--shadow-color);
+    border-radius: 4px;
+    flex-basis: 47%;
+    position: relative;
+}
+
+.tourist-card{
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.tourist-image {
+    width: 100%;
+    height: 300px;
+}
+
+.tourist-container .see-more-button-container .see-more-button .button-line-bottom{
+    background-color: var(--shadow-color-dark);
+}
+
+/* Food Page CSS */
+.container-even{
+    background-color: var(--text-color);
+}
+.container-even h1{
+    color: var(--color-primary-light) !important;
+}
+
+.food-item.food-page{
+    flex-basis: 35%;
+    transform: unset;
+}
+
+.food-item.food-page:hover, .tourist-item.tourist-page:hover{
+    box-shadow: -1px 9px 40px -12px var(--shadow-color-dark);
+    transform: unset;
+}
+
+.food-item.food-page .food-image img, .tourist-item.tourist-page .tourist-image img{
+    transition: all 0.3s ease-in;
+}
+
+.food-item.food-page:hover .food-image img, .tourist-item.tourist-page:hover .tourist-image img{
+    transform: scale(1.1);
+}
+
+.food-item.food-page .food-image, .tourist-item.tourist-page .tourist-image{
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+
+.food-description-container, .tourist-description-container{
+    padding: 15px 35px;
+    height: 206px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: height 1s ease-out;
+}
+
+.food-description-container .food-description, .tourist-description-container .tourist-description{
+    padding: unset;
+}
+
+.container-odd{
+    background-color: var(--color-primary-dark);
+}
+
+.container-odd h1{
+    color: white;
+}
+
+.menu-even{
+    background-color: var(--color-primary);
+}
+
+.menu-odd{
+    background-color: var(--color-primary);
+}
+
+.left-stick-menu{
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+    left: 0;
+    top: 35%;
+    width: 75px;
+    min-height: 75px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease-in 0s, height 0.3s ease-in 1s;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    transition: display 0.4s ease-in;
+    margin: auto;
+    animation: left-right 1.5s ease infinite;
+    cursor: pointer;
+}
+
+i.fa.fa-angle-double-left{
+    color: white;
+    font-size: 30px;
+}
+
+@keyframes left-right{
+    0% {
+        transform: translateX(0px);
+        color: var(--color-primary-light);
+    }
+    50% {
+        transform: translateX(-10px);
+        color: var(--color-primary-lighter);
+    }
+    100% {
+        transform: translateX(0px);
+        color: var(--color-primary-light);
+    }
+}
+
+.left-menu-link{
+    display: flex;
+    padding: 20px;
+    color: var(--color-primary-lighter);
+    text-decoration: none;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.left-menu-link:hover{
+    color: var(--text-color);
+    background-color: var(--color-primary-light);
+}
+
+/* Tourist page */
+.tourist-contains p{
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 400;
 }
